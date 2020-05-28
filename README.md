@@ -1,7 +1,10 @@
+Official patches for previous versions can be requested at: https://www.saltstack.com/lp/request-patch-april-2020/
 
-⚠⚠  **APPLY THESE PATCHES AT YOUR OWN RISK** ⚠⚠
+⚠ Patches here are custom, and may differ from official ones ⚠
 
-# Backported security patches for unspported salt versions
+# Backported security patches for unsupported salt versions
+
+[![Build Status](https://travis-ci.org/rossengeorgiev/salt-security-backports.svg?branch=master)](https://travis-ci.org/rossengeorgiev/salt-security-backports)
 
 Patches in this repo address the following CVEs:
 
@@ -11,6 +14,10 @@ Additionally include the following bugfixes:
 
 * fix typo `_minion_runner` -> `minion_runner`. See: https://docs.saltstack.com/en/latest/topics/releases/3000.2.html#known-issue
 * fix type `_find_file_and_stat` -> `_find_hash_and_stat`. See https://github.com/rossengeorgiev/salt-security-backports/issues/1
+* removal of `run_func` from whitelist
+* missing `import salt.utils.verify`
+
+Above fixed are included in latest release of SaltStack, specifically `v2019.2.5` and `v3000.3`.
 
 # Check if your salt-master is vulnerable
 
